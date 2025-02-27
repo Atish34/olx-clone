@@ -6,11 +6,10 @@ const path = require("path")
 const { adminProtected, userProtected } = require("./middleware/protected")
 require("dotenv").config()
 
-
 const app = express()
-app.use(express.static("dist")) 
 app.use(express.json()) 
 app.use(cookieParser()) 
+app.use(express.static("dist")) 
 app.use(cors({
     origin: true,
     credentials: true // cookie
