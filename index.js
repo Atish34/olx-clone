@@ -8,8 +8,8 @@ require("dotenv").config()
 
 
 const app = express()
-app.use(express.json()) // req.body
-app.use(cookieParser()) // req.cookies
+app.use(express.static("dist")) 
+app.use(cookieParser()) 
 app.use(cors({
     origin: true,
     credentials: true // cookie
